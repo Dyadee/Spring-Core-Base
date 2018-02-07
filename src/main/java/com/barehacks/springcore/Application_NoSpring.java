@@ -1,6 +1,6 @@
 package com.barehacks.springcore;
 
-public class Application {
+public class Application_NoSpring {
 
 	public static void main(String[] args) {
 		// create the object
