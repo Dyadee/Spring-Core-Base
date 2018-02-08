@@ -11,6 +11,9 @@ public class Application {
 		BeanA beanA = context.getBean("BeanA", BeanA.class);
 		System.out.println(beanA.greetingsFromA());
 		
+		BeanB beanB = context.getBean("BeanB", BeanB.class);
+		System.out.println(beanB.getAge());
+		
 		context.close();
 
 	}
