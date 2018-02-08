@@ -2,6 +2,17 @@ package com.barehacks.springcore;
 
 public class TrackCoach implements Coach{
 	
+	//define a private field for the dependency
+	private FortuneService fortuneService;
+	
+	//define a constructor for the dependency injection
+	public TrackCoach(FortuneService myfortuneService) {
+		this.fortuneService = myfortuneService;
+
+	}
+		
+	public TrackCoach() {}
+
 	@Override
 	public String getDailyWorkout() {
 		return "Run a hard 5k";
@@ -9,7 +20,7 @@ public class TrackCoach implements Coach{
 
 	@Override
 	public String getDailyFortune() {
-		return null;
+		return "Just do it! " + fortuneService.getFortune();
 	}
 
 }

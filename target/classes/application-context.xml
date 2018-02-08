@@ -8,7 +8,7 @@
 	<bean id="myFortune" class="com.barehacks.springcore.HappyFortuneService">
 	</bean>
 	
-	<bean id="myCoach" class="com.barehacks.springcore.BaseballCoach" >
+	<bean id="myCoach" class="com.barehacks.springcore.TrackCoach" >
 		<constructor-arg ref="myFortune"/>
 	</bean>
 
