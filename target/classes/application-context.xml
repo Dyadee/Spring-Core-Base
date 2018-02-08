@@ -14,6 +14,10 @@
 	
 	<bean id="myCricketCoach" class="com.barehacks.springcore.CricketCoach" >
 		<property name="fortuneService" ref="myFortuneService"/>
+		
+		<!-- inject literal values -->
+		<property name="emailAddress" value="thebestcoach@barehacks.com"/>
+		<property name="team" value="Xavier Augustine Team" />
 	</bean>
 
 	

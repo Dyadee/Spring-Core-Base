@@ -16,6 +16,11 @@ public class Application_SetterDemo {
 		System.out.println(cricketCoach.getDailyWorkout());
 		System.out.println(cricketCoach.getDailyFortune());
 		
+		//call the methods that use the literal values
+		
+		System.out.println(cricketCoach.getEmailAddress());
+		System.out.println(cricketCoach.getTeam());
+		
 		//close the context
 		context.close();
 		
