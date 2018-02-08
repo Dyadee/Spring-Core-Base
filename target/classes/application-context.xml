@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-	http://www.springframework.org/schema/beans/spring-beans.xsd">
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context 
+		http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- load the properties file: sport.properties -->
+	<context:property-placeholder location="classpath:sport.properties" />
 	
 	<!-- define the dependency -->
 	<bean id="myFortuneService" class="com.barehacks.springcore.HappyFortuneService">
@@ -16,8 +22,12 @@
 		<property name="fortuneService" ref="myFortuneService"/>
 		
 		<!-- inject literal values -->
-		<property name="emailAddress" value="thebestcoach@barehacks.com"/>
-		<property name="team" value="Xavier Augustine Team" />
+		<!-- <property name="emailAddress" value="thebestcoach@barehacks.com"/>
+		<property name="team" value="Xavier Augustine Team" /> -->
+		
+		<!-- inject literal values from the properties file-->
+		<property name="emailAddress" value="${dyadee.email}"/>
+		<property name="team" value="${dyadee.team}"/>
 	</bean>
 
 	
