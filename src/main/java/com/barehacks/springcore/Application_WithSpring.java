@@ -20,6 +20,9 @@ public class Application_WithSpring {
 		// 4.1 close the context this way if purely using the ClassPathXmlApplicationContext
 		//((AbstractApplicationContext) context).close();
 		
+		//let's call our new method of fortune
+		System.out.println(theCoach.getDailyFortune());
+		
 		// 4.2 close the context this way if already casted to AbstractApplicationContext
 		context.close();
 		
